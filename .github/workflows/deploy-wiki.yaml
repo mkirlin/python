@@ -25,7 +25,7 @@ jobs:
         git config --global --add safe.directory "/github/workspace"
         git config --global --add safe.directory "/github/workspace/wiki"
         git clone https://github.com/kubernetes-client/python.wiki.git wiki
-        message=$(git log -1 --format=%B) >> $GITHUB_OUTPUT
+        echo "message=$(git log -1 --format=%B)" >> $GITHUB_OUTPUT
     - name: Copy to wiki repository
       id: copy_to_wiki
       run: |

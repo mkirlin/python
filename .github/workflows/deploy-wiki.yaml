@@ -38,5 +38,5 @@ jobs:
         git config user.email github-actions@github.com
         git add .
         git commit -m "${{ steps.clone_wiki.outputs.message }}"
-        git push
+        git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
         
